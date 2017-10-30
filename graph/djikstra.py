@@ -1,4 +1,4 @@
-function Dijkstra(Graph, source):
+def dijkstra(G, s):
 
     create vertex set Q
 

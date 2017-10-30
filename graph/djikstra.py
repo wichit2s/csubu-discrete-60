@@ -1,13 +1,15 @@
+### ประกาศ ฟังก์ชัน 
 def dijkstra(G, s):
 
-    create vertex set Q
+    #create vertex set Q
 
-    for each vertex v in Graph:             // Initialization
-        dist[v] ← INFINITY                  // Unknown distance from source to v
-        prev[v] ← UNDEFINED                 // Previous node in optimal path from source
-        add v to Q                          // All nodes initially in Q (unvisited nodes)
+    #for each vertex v in Graph:             // Initialization
+    #    dist[v] ← INFINITY                  // Unknown distance from source to v
+    #    prev[v] ← UNDEFINED                 // Previous node in optimal path from source
+    #    add v to Q                          // All nodes initially in Q (unvisited nodes)
+    Q = { (v,INFINITY,UNDEFINED) for v in G['V'] }
 
-     dist[source] ← 0                        // Distance from source to source
+    dist[source] ← 0                        // Distance from source to source
      
      while Q is not empty:
          u ← vertex in Q with min dist[u]    // Node with the least distance
@@ -21,3 +23,9 @@ def dijkstra(G, s):
                  prev[v] ← u 
 
      return dist[], prev[]
+
+ ### ได้เวลาเรียกใช้ ####
+ G = {
+   'V': 'ABCDEF',
+   'E': [], 
+}
